@@ -1,0 +1,297 @@
+{
+    "name": "HaettAssessment",
+    "path": "f:\\Projects\\HaettAssessment",
+    "type": "directory",
+    "children": [
+        {
+            "name": "backend",
+            "type": "folder",
+            "icon": "📁",
+            "children": [
+                {
+                    "name": "alembic",
+                    "type": "folder",
+                    "icon": "📁",
+                    "children": [
+                        {
+                            "name": "versions",
+                            "type": "folder",
+                            "icon": "📁"
+                        },
+                        {
+                            "name": "README",
+                            "type": "file",
+                            "icon": "📄"
+                        },
+                        {
+                            "name": "env.py",
+                            "type": "file",
+                            "icon": "🐍"
+                        },
+                        {
+                            "name": "script.py.mako",
+                            "type": "file",
+                            "icon": "📄"
+                        }
+                    ]
+                },
+                {
+                    "name": "app",
+                    "type": "folder",
+                    "icon": "📁",
+                    "children": [
+                        {
+                            "name": "core",
+                            "type": "folder",
+                            "icon": "📁",
+                            "children": [
+                                {
+                                    "name": "config.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                },
+                                {
+                                    "name": "security.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "db",
+                            "type": "folder",
+                            "icon": "📁",
+                            "children": [
+                                {
+                                    "name": "database.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "models",
+                            "type": "folder",
+                            "icon": "📁",
+                            "children": [
+                                {
+                                    "name": "application.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                },
+                                {
+                                    "name": "discount_code.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                },
+                                {
+                                    "name": "user.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "routers",
+                            "type": "folder",
+                            "icon": "📁",
+                            "children": [
+                                {
+                                    "name": "admin.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                },
+                                {
+                                    "name": "auth.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                },
+                                {
+                                    "name": "partner.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "schemas",
+                            "type": "folder",
+                            "icon": "📁",
+                            "children": [
+                                {
+                                    "name": "application.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                },
+                                {
+                                    "name": "discount_code.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                },
+                                {
+                                    "name": "user.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "services",
+                            "type": "folder",
+                            "icon": "📁",
+                            "children": [
+                                {
+                                    "name": "discount_service.py",
+                                    "type": "file",
+                                    "icon": "🐍"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "main.py",
+                            "type": "file",
+                            "icon": "🐍"
+                        }
+                    ]
+                },
+                {
+                    "name": "alembic.ini",
+                    "type": "file",
+                    "icon": "📄"
+                },
+                {
+                    "name": "requirements.txt",
+                    "type": "file",
+                    "icon": "📄"
+                },
+                {
+                    "name": "seed.py",
+                    "type": "file",
+                    "icon": "🐍"
+                }
+            ]
+        },
+        {
+            "name": "frontend",
+            "type": "folder",
+            "icon": "📁",
+            "children": [
+                {
+                    "name": "public",
+                    "type": "folder",
+                    "icon": "📁",
+                    "children": [
+                        {
+                            "name": "favicon.svg",
+                            "type": "file",
+                            "icon": "🖼️"
+                        },
+                        {
+                            "name": "icons.svg",
+                            "type": "file",
+                            "icon": "🖼️"
+                        }
+                    ]
+                },
+                {
+                    "name": "src",
+                    "type": "folder",
+                    "icon": "📁",
+                    "children": [
+                        {
+                            "name": "assets",
+                            "type": "folder",
+                            "icon": "📁",
+                            "children": [
+                                {
+                                    "name": "hero.png",
+                                    "type": "file",
+                                    "icon": "🖼️"
+                                },
+                                {
+                                    "name": "vite.svg",
+                                    "type": "file",
+                                    "icon": "🖼️"
+                                },
+                                {
+                                    "name": "vue.svg",
+                                    "type": "file",
+                                    "icon": "🖼️"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "components",
+                            "type": "folder",
+                            "icon": "📁",
+                            "children": [
+                                {
+                                    "name": "HelloWorld.vue",
+                                    "type": "file",
+                                    "icon": "📄"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "App.vue",
+                            "type": "file",
+                            "icon": "📄"
+                        },
+                        {
+                            "name": "main.js",
+                            "type": "file",
+                            "icon": "📜"
+                        },
+                        {
+                            "name": "style.css",
+                            "type": "file",
+                            "icon": "🎨"
+                        }
+                    ]
+                },
+                {
+                    "name": ".gitignore",
+                    "type": "file",
+                    "icon": "📁"
+                },
+                {
+                    "name": "README.md",
+                    "type": "file",
+                    "icon": "📝"
+                },
+                {
+                    "name": "index.html",
+                    "type": "file",
+                    "icon": "🌐"
+                },
+                {
+                    "name": "package-lock.json",
+                    "type": "file",
+                    "icon": "⚙️"
+                },
+                {
+                    "name": "package.json",
+                    "type": "file",
+                    "icon": "📦"
+                },
+                {
+                    "name": "vite.config.js",
+                    "type": "file",
+                    "icon": "📜"
+                }
+            ]
+        },
+        {
+            "name": ".gitignore",
+            "type": "file",
+            "icon": "📁"
+        }
+    ],
+    "metadata": {
+        "generated": "2026-06-02T16:15:04.847Z",
+        "generator": "FileTree Pro Extension",
+        "version": "0.2.0",
+        "showIcons": true,
+        "maxDepth": 10
+    }
+}
