@@ -30,10 +30,31 @@
       @reapply="reapply"
     />
 
-    <PartnerDashboard
-      v-else-if="application.status === 'APPROVED'"
-      :codes="codes"
-    />
+    <div v-else-if="application.status === 'APPROVED'">
+      <div class="card">
+        <h2>
+          {{ application.business_name }}
+        </h2>
+
+        <p>
+          <strong>Partner Type:</strong>
+          {{ application.partner_type }}
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          {{ application.status }}
+        </p>
+
+        <p v-if="application.approved_at">
+          <strong>Approved:</strong>
+          {{ new Date(application.approved_at).toLocaleDateString() }}
+        </p>
+      </div>
+
+      <PartnerDashboard :codes="codes" />
+    </div>
+
     <div v-if="showLogin" class="login-box">
       <h3>Login</h3>
 

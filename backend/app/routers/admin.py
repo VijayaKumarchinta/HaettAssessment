@@ -64,7 +64,6 @@ def approve_application(
         raise HTTPException(status_code=404, detail="Application not found")
 
     application.status = "APPROVED"
-
     application.approved_at = datetime.utcnow()
 
     code = DiscountCode(

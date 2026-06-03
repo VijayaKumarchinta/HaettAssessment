@@ -34,4 +34,4 @@ class PartnerApplication(Base):
 
     applied_at = Column(DateTime(timezone=True), server_default=func.now())
 
-    approved_at = Column(DateTime(timezone=True))
+    approved_at = Column(DateTime(timezone=True), nullable=True)

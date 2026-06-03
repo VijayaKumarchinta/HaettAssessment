@@ -150,3 +150,22 @@ h3 {
   font-weight: 700;
   font-size: 20px;
 }
+
+.stats-card {
+  text-align: center;
+}
+
+.stats-card h3 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.code-card {
+  border-left: 5px solid #2563eb;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}

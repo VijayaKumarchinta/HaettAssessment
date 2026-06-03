@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Optional
 
 from pydantic import BaseModel
@@ -23,6 +24,7 @@ class ApplicationResponse(BaseModel):
     status: str
 
     rejection_reason: str | None
+    approved_at: datetime | None = None
 
     class Config:
         from_attributes = True

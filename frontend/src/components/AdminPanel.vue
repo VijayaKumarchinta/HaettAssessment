@@ -59,6 +59,31 @@
     <h3>{{ app.business_name }}</h3>
 
     <p>
+      <strong>Name:</strong>
+      {{ app.user_name || "N/A" }}
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      {{ app.user_email || "N/A" }}
+    </p>
+
+    <p>
+      <strong>Website:</strong>
+      {{ app.website || "N/A" }}
+    </p>
+
+    <p>
+      <strong>Audience Size:</strong>
+      {{ app.audience_size || "N/A" }}
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      {{ app.description || "N/A" }}
+    </p>
+
+    <p>
       Partner Type:
       {{ app.partner_type }}
     </p>
