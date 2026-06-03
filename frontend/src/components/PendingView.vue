@@ -1,13 +1,22 @@
 <template>
   <div class="card">
-    <h2>Application Submitted</h2>
+    <h2>Application Under Review</h2>
 
     <p>
-      Status:
-
       <span class="badge badge-pending"> UNDER REVIEW </span>
     </p>
 
-    <p>Your application is currently under review.</p>
+    <p>
+      Applied:
+      {{ application?.applied_at }}
+    </p>
+
+    <p>You will hear back within a few business days.</p>
   </div>
 </template>
+
+<script setup>
+defineProps({
+  application: Object,
+});
+</script>

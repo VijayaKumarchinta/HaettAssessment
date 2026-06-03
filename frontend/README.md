@@ -1,5 +1,164 @@
-# Vue 3 + Vite
+# Haett Partner Management System
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Overview
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+This project was developed as part of the Haett Full-Stack Intern Assessment.
+
+The application enables influencers, gyms, affiliates, and businesses to apply for the Haett Partner Program. Administrators can review applications, approve or reject applicants, and automatically generate discount codes for approved partners.
+
+---
+
+## Technology Stack
+
+### Frontend
+
+* Vue 3
+* Vite
+* Pinia
+* Axios
+
+### Backend
+
+* FastAPI
+* SQLAlchemy
+* JWT Authentication
+
+### Database
+
+* PostgreSQL
+
+---
+
+## Features
+
+### Visitor View
+
+* Landing page introducing the Haett Partner Program
+* Login call-to-action
+
+### User View
+
+* Partner application form
+* Required validation
+* Pending review status
+* Reapply after rejection
+
+### Approved Partner Dashboard
+
+* View assigned discount codes
+* Copy discount codes
+* View code status
+
+### Admin Dashboard
+
+* Review applications
+* Approve applications
+* Reject applications with reason
+* View application statistics
+* Toggle discount code status
+
+---
+
+## Project Setup
+
+### Backend
+
+```bash
+cd backend
+
+pip install -r requirements.txt
+
+alembic upgrade head
+
+python seed.py
+
+uvicorn app.main:app --reload
+```
+
+Backend URL:
+
+```text
+http://127.0.0.1:8000
+```
+
+Swagger Documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+### Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+Frontend URL:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## Test Credentials
+
+### Admin
+
+```text
+Email: admin@haett.com
+Password: Admin@123
+```
+
+### User
+
+```text
+Email: user@haett.com
+Password: User@123
+```
+
+---
+
+## Application Flow
+
+Visitor
+→ Login
+
+User
+→ Submit Partner Application
+
+Application
+→ Pending Review
+
+Admin
+→ Approve / Reject
+
+Approved User
+→ Partner Dashboard
+
+Rejected User
+→ Reapply
+
+---
+
+## Database
+
+### Tables
+
+* users
+* partner_applications
+* discount_codes
+
+---
+
+## Author
+
+Vijay Kumar Chinta
+B.Tech – Data Science & Big Data Analytics
+KL University

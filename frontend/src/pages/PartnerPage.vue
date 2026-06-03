@@ -1,14 +1,12 @@
 <template>
   <div class="container">
-    <div v-if="auth.user" class="header">
+    <div v-if="auth.user" class="navbar">
       <div>
-        <h3>
-          {{ auth.user.name }}
-        </h3>
+        <h2 style="margin: 0">Haett Partner Portal</h2>
 
-        <p>
-          Role:
-          {{ auth.user.role }}
+        <p style="margin: 0">
+          Welcome,
+          {{ auth.user.name }}
         </p>
       </div>
 

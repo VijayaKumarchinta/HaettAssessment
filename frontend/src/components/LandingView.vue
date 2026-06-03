@@ -1,6 +1,11 @@
 <template>
   <div class="card hero">
-    <h1>Haett Partner Program</h1>
+    <h1>Grow With Haett</h1>
+
+    <p>
+      Become an approved partner and unlock exclusive discount codes, marketing
+      support, and commission opportunities.
+    </p>
 
     <p>
       Join the Haett partner ecosystem and earn commissions through referrals,
