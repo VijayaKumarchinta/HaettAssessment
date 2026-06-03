@@ -1,0 +1,31 @@
+# Auto-detect and normalize text files to LF
+* text=auto
+
+# Explicitly enforce LF for all text files in this project
+*.py    text eol=lf
+*.vue   text eol=lf
+*.js    text eol=lf
+*.css   text eol=lf
+*.html  text eol=lf
+*.json  text eol=lf
+*.mako text eol=lf
+*.md    text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.toml  text eol=lf
+*.ini   text eol=lf
+*.cfg   text eol=lf
+*.txt   text eol=lf
+
+# Binary files - don't touch
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.svg   binary
+*.docx  binary
+*.woff  binary
+*.woff2 binary
+*.eot   binary
+*.ttf   binary
