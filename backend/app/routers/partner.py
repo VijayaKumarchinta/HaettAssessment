@@ -54,6 +54,7 @@ def get_application(
     application = (
         db.query(PartnerApplication)
         .filter(PartnerApplication.user_id == current_user.id)
+        .order_by(PartnerApplication.applied_at.desc())
         .first()
     )
 
