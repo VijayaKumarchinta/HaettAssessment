@@ -15,14 +15,65 @@ router = APIRouter(prefix="/admin", tags=["Admin"])
 
 @router.get("/applications")
 def get_applications(
-    status: str = "ALL", db: Session = Depends(get_db), admin=Depends(require_admin)
+    status: str = "ALL",
+    search: str = "",
+    db: Session = Depends(get_db),
+    admin=Depends(require_admin),
 ):
     query = db.query(PartnerApplication)
 
     if status != "ALL":
         query = query.filter(PartnerApplication.status == status)
 
+    if search:
+        query = query.filter(PartnerApplication.business_name.ilike(f"%{search}%"))
+
     return query.all()
+
+
+@router.get("/applications/{application_id}/codes")
+def get_application_codes(
+    application_id: int,
+    db: Session = Depends(get_db),
+    admin=Depends(require_admin),
+):
+    application = (
+        db.query(PartnerApplication)
+        .filter(PartnerApplication.id == application_id)
+        .first()
+    )
+    if not application:
+        raise HTTPException(status_code=404, detail="Application not found")
+
+    return (
+        db.query(DiscountCode)
+        .filter(DiscountCode.application_id == application_id)
+        .all()
+    )
+
+
+@router.post("/codes/{code_id}/activate")
+def activate_code(
+    code_id: int, db: Session = Depends(get_db), admin=Depends(require_admin)
+):
+    code = db.query(DiscountCode).filter(DiscountCode.id == code_id).first()
+    if not code:
+        raise HTTPException(status_code=404, detail="Code not found")
+    code.is_active = True
+    db.commit()
+    return {"code": code.code, "is_active": code.is_active}
+
+
+@router.post("/codes/{code_id}/deactivate")
+def deactivate_code(
+    code_id: int, db: Session = Depends(get_db), admin=Depends(require_admin)
+):
+    code = db.query(DiscountCode).filter(DiscountCode.id == code_id).first()
+    if not code:
+        raise HTTPException(status_code=404, detail="Code not found")
+    code.is_active = False
+    db.commit()
+    return {"code": code.code, "is_active": code.is_active}
 
 
 @router.post("/applications/{application_id}/reject")
@@ -78,22 +129,6 @@ def approve_application(
     db.commit()
 
     return {"message": "Application approved"}
-
-
-@router.patch("/codes/{code_id}/toggle")
-def toggle_code(
-    code_id: int, db: Session = Depends(get_db), admin=Depends(require_admin)
-):
-    code = db.query(DiscountCode).filter(DiscountCode.id == code_id).first()
-
-    if not code:
-        raise HTTPException(status_code=404, detail="Code not found")
-
-    code.is_active = not code.is_active
-
-    db.commit()
-
-    return {"code": code.code, "is_active": code.is_active}
 
 
 @router.get("/summary")

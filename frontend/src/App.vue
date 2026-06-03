@@ -1,7 +1,8 @@
-<template>
-  <PartnerPage />
-</template>
-
 <script setup>
-import PartnerPage from "./pages/PartnerPage.vue";
+import FloatingBackground from "./components/FloatingBackground.vue";
 </script>
+
+<template>
+  <FloatingBackground />
+  <router-view />
+</template>
