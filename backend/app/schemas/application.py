@@ -1,5 +1,6 @@
-from pydantic import BaseModel
 from typing import Optional
+
+from pydantic import BaseModel
 
 
 class ApplicationCreate(BaseModel):
@@ -25,6 +26,7 @@ class ApplicationResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
 
 class RejectRequest(BaseModel):
     reason: str
