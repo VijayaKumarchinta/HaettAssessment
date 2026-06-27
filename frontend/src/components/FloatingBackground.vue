@@ -1,10 +1,10 @@
 <template>
-  <div class="floating-bg">
-    <div class="food">🥗</div>
-    <div class="food">🍎</div>
-    <div class="food">🥑</div>
-    <div class="food">📦</div>
-    <div class="food">🎟️</div>
+  <div class="floating-bg" aria-hidden="true">
+    <div class="food" aria-hidden="true">🥗</div>
+    <div class="food" aria-hidden="true">🍎</div>
+    <div class="food" aria-hidden="true">🥑</div>
+    <div class="food" aria-hidden="true">📦</div>
+    <div class="food" aria-hidden="true">🎟️</div>
   </div>
 </template>
 
@@ -18,9 +18,15 @@
 
 .food {
   position: absolute;
-  font-size: 80px;
+  font-size: clamp(40px, 8vw, 80px);
   opacity: 0.05;
   animation: float 12s infinite ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .food {
+    animation: none;
+  }
 }
 
 .food:nth-child(1) {

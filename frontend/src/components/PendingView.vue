@@ -1,6 +1,6 @@
 <template>
-  <div class="card pending-card">
-    <div class="pending-icon">⏳</div>
+  <div class="card pending-card" role="status" aria-live="polite">
+    <div class="pending-icon" aria-hidden="true">⏳</div>
     <h2>Application Under Review</h2>
     <span class="badge status-pending">UNDER REVIEW</span>
     <p class="pending-msg">
@@ -27,7 +27,7 @@ const formattedDate = computed(() => {
 
 <style scoped>
 .pending-card {
-  padding: 60px 40px;
+  padding: clamp(32px, 6vw, 60px) clamp(24px, 5vw, 40px);
   max-width: 560px;
   margin: 0 auto;
   text-align: center;
@@ -35,9 +35,10 @@ const formattedDate = computed(() => {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  width: 100%;
 }
-.pending-icon { font-size: 52px; }
-.pending-card h2 { font-size: 24px; }
-.pending-msg { color: #475569; line-height: 1.7; max-width: 400px; }
-.pending-hint { color: #94a3b8; font-size: 14px; }
+.pending-icon { font-size: clamp(36px, 6vw, 52px); }
+.pending-card h2 { font-size: clamp(20px, 3.5vw, 24px); }
+.pending-msg { color: #475569; line-height: 1.7; max-width: 400px; font-size: clamp(14px, 2vw, 15px); }
+.pending-hint { color: #94a3b8; font-size: clamp(13px, 2vw, 14px); }
 </style>

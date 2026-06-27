@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
+/* ═══════════════════════════════════════════════════════════════
+   Design Tokens & Breakpoints
+   ═══════════════════════════════════════════════════════════════ */
+
 :root {
   --primary: #ff6b35;
   --secondary: #ff9f43;
@@ -16,12 +20,41 @@
   --muted: #64748b;
 
   --border: #e2e8f0;
+
+  --radius-card: 20px;
+  --radius-btn: 14px;
+  --radius-input: 10px;
+  --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.05);
+  --shadow-btn: 0 10px 25px rgba(255, 107, 53, 0.35);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Accessibility: Skip-to-content link
+   ═══════════════════════════════════════════════════════════════ */
+
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 0 0 8px 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 body {
@@ -31,40 +64,83 @@ body {
   overflow-x: hidden;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   Accessibility: Focus Styles
+   ═══════════════════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Accessibility: Reduced Motion
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .card:hover {
+    transform: none !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Card Component
+   ═══════════════════════════════════════════════════════════════ */
+
 .card {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-
-  transition: 0.3s;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px) scale(1.01);
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   Primary Button
+   ═══════════════════════════════════════════════════════════════ */
+
 .primary-btn {
   background: linear-gradient(135deg, #ff6b35, #ff9f43);
-
   color: white;
   border: none;
-
   padding: 14px 24px;
-
-  border-radius: 14px;
-
+  border-radius: var(--radius-btn);
   cursor: pointer;
-
   font-weight: 600;
+  font-size: 15px;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
-.primary-btn:hover {
+.primary-btn:hover:not(:disabled) {
   box-shadow: 0 10px 25px rgba(255, 107, 53, 0.35);
+  transform: translateY(-1px);
 }
+
+.primary-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.primary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Status Badges
+   ═══════════════════════════════════════════════════════════════ */
 
 .status-approved {
   background: #dcfce7;
@@ -86,4 +162,27 @@ body {
   border-radius: 999px;
   font-size: 13px;
   font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Responsive Table Wrapper
+   ═══════════════════════════════════════════════════════════════ */
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+  min-width: max-content;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Responsive Container
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .card {
+    border-radius: 16px;
+  }
 }
