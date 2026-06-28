@@ -3,6 +3,8 @@
 A full-stack partner management system for **Haett** — a health & wellness brand.  
 Built as part of the **Haett Full-Stack Intern Assessment**.
 
+> **📍 Runs locally** — No live demo deployed. Follow the Quick Start guide below to run the app.
+
 ---
 
 ## 🌟 Why This App?
