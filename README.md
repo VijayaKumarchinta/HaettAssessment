@@ -230,6 +230,14 @@ Approved partners get a profile card, analytics stats (total codes, uses, discou
 
 ---
 
+<div align="center">
+  <sub>Built with ❤️ for the Haett Partner Portal</sub>
+  <br><br>
+  <sub>🏠 <a href="https://github.com/VijayaKumarchinta/portfolio">View my complete portfolio</a></sub>
+</div>
+
+---
+
 ## 👨‍💻 Author
 
 **Vijay Kumar Chinta**  
