@@ -8,5 +8,8 @@
     "deploy": "wrangler deploy",
     "db:migrate": "wrangler d1 migrations apply haett-db --remote",
     "db:init": "wrangler d1 migrations apply haett-db --local"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
   }
 }
