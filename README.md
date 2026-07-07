@@ -3,7 +3,16 @@
 A full-stack partner management system for **Haett** — a health & wellness brand.  
 Built as part of the **Haett Full-Stack Intern Assessment**.
 
-> **📍 Runs locally** — No live demo deployed. Follow the Quick Start guide below to run the app.
+> **📍 Live:** Frontend: [haett-assessment.pages.dev](https://haett-assessment.pages.dev) • API: [haett-assessment-api.vijayakumar-chinta15.workers.dev](https://haett-assessment-api.vijayakumar-chinta15.workers.dev)
+
+<p align="center">
+  <img src="https://img.shields.io/github/actions/workflow/status/VijayaKumarchinta/HaettAssessment/deploy-frontend.yml?branch=main&logo=github&label=Frontend" alt="Frontend Deploy" />
+  <img src="https://img.shields.io/github/actions/workflow/status/VijayaKumarchinta/HaettAssessment/deploy-worker.yml?branch=main&logo=github&label=API" alt="API Deploy" />
+  <img src="https://img.shields.io/badge/Vue_3-4FC08D?logo=vue.js&logoColor=white" alt="Vue 3" />
+  <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?logo=cloudflare&logoColor=white" alt="Workers" />
+  <img src="https://img.shields.io/badge/D1-FF6B35?logo=cloudflare&logoColor=white" alt="D1" />
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License" />
+</p>
 
 ---
 
