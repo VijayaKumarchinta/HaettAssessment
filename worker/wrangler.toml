@@ -1,0 +1,10 @@
+name = "haett-assessment-api"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "haett-db"
+database_id = "93a3da91-274e-456b-b0bc-e9bf9dfedaa5"
+migrations_dir = "migrations"
