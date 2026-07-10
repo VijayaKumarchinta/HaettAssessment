@@ -1,4 +1,4 @@
-name = "haett-assessment"
+name = "vijayakumarchinta-haett-portal"
 pages_build_command = "npm run build"
 pages_build_output_dir = "dist"
 compatibility_date = "2026-07-01"
