@@ -11,7 +11,7 @@
   [![Frontend](https://img.shields.io/github/actions/workflow/status/VijayaKumarchinta/HaettAssessment/deploy-frontend.yml?branch=main&style=for-the-badge&logo=github&label=Frontend)](https://github.com/VijayaKumarchinta/HaettAssessment/actions)
   [![API](https://img.shields.io/github/actions/workflow/status/VijayaKumarchinta/HaettAssessment/deploy-worker.yml?branch=main&style=for-the-badge&logo=github&label=API)](https://github.com/VijayaKumarchinta/HaettAssessment/actions)
   [![Frontend](https://img.shields.io/badge/FRONTEND-8A2BE2?style=for-the-badge&logo=cloudflare&logoColor=white)](https://vijayakumarchinta-haett-portal.pages.dev)
-  [![API](https://img.shields.io/badge/API-8A2BE2?style=for-the-badge&logo=cloudflare&logoColor=white)](https://haett-assessment-api.vijayakumar-chinta15.workers.dev)
+  [![Source](https://img.shields.io/badge/Source-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/VijayaKumarchinta/HaettAssessment)
 
   <p>A self-serve partner ecosystem with application flows, admin dashboard, and automated discount code generation for the Haett health & wellness brand.</p>
   <p><sub>Built for the <strong>Haett Full-Stack Intern Assessment</strong></sub></p>
